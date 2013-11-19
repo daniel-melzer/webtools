@@ -10,5 +10,9 @@ WebToolsApp.config(['$routeProvider', function($routeProvider) {
 				templateUrl: 'js/partials/password-form.html',
 				controller: 'PasswordGeneratorCtrl'
 			})
+			.when('/timestamp', {
+				templateUrl: 'js/partials/timestamp-form.html',
+				controller: 'TimestampConverterCtrl'
+			})
 			.otherwise({ redirectTo: '/password' });
 }]);
