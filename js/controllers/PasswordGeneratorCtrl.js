@@ -1,4 +1,4 @@
-var WebToolsController = angular.module('WebToolsController', []);
+var WebToolsController = WebToolsController || angular.module('WebToolsController', []);
 
 WebToolsController.controller('PasswordGeneratorCtrl', ['$scope', function($scope) {
 

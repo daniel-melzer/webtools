@@ -1,0 +1,37 @@
+<form class="form-horizontal">
+	<fieldset>
+		<legend>Date and time</legend>
+		<div class="control-group">
+			<div class="control-label">Date</div>
+			<div class="controls">
+				<input type="number" name="year" class="input-mini" placeholder="Year" ng-model="year">
+				-
+				<input type="number" min="1" max="12" name="month" class="input-mini" placeholder="Month" ng-model="month">
+				-
+				<input type="number" min="1" max="31" name="day" class="input-mini" placeholder="Day" ng-model="day">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="control-label">Time</div>
+			<div class="controls">
+				<input type="number" min="0" max="23" name="hour" class="input-mini" placeholder="Hour" ng-model="hour">
+				-
+				<input type="number" min="0" max="59" name="minute" class="input-mini" placeholder="Minute" ng-model="minute">
+				-
+				<input type="number" min="0" max="59" name="second" class="input-mini" placeholder="Second" ng-model="second">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="control-label">Timestamp</div>
+			<div class="controls">
+				<input type="number" name="tsmp" class="input-large" placeholder="Timestamp" ng-model="tsmp">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<button class="btn" ng-click="convertTime()"><i class="icon-exchange"></i> Convert</button>
+				<button class="btn btn-danger" ng-click="reset()"><i class="icon-refresh"></i> Reset</button>
+			</div>
+		</div>
+	</fieldset>
+</form>
