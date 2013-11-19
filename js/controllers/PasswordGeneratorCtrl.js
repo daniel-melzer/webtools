@@ -1,4 +1,6 @@
-angular.module('WebTools').controller('PasswordGeneratorCtrl', function($scope) {
+var WebToolsController = angular.module('WebToolsController', []);
+
+WebToolsController.controller('PasswordGeneratorCtrl', ['$scope', function($scope) {
 
 
 	$scope.radioLength = 8;
@@ -57,4 +59,4 @@ angular.module('WebTools').controller('PasswordGeneratorCtrl', function($scope) 
 		$scope.hash = hash.toString();
 	}
 
-});
+}]);

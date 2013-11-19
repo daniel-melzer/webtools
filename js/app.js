@@ -1,1 +1,14 @@
-angular.module('WebTools', ['ui.bootstrap']);
+var WebToolsApp = angular.module('WebToolsApp', [
+	'ui.bootstrap',
+	'ngRoute',
+	'WebToolsController'
+]);
+
+WebToolsApp.config(['$routeProvider', function($routeProvider) {
+	$routeProvider
+			.when('/password', {
+				templateUrl: 'js/partials/password-form.html',
+				controller: 'PasswordGeneratorCtrl'
+			})
+			.otherwise({ redirectTo: '/password' });
+}]);
