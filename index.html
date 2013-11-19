@@ -36,7 +36,7 @@
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 
-	<body ng-app="WebTools">
+	<body ng-app="WebToolsApp">
 		<header class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container-fluid">
@@ -49,88 +49,22 @@
 			<div class="row-fluid">
 				<nav class="span3 well">
 					<ul class="nav nav-list">
-						<li class="active">Password generator</li>
+						<li class="active"><a href="#/password">Password generator</a></li>
 					</ul>
 				</nav>
 
-				<section class="span9" ng-controller="PasswordGeneratorCtrl">
-					<form class="form-horizontal">
-						<fieldset>
-							<legend>Password settings</legend>
-							<div class="control-group">
-								<div class="control-label">Length:</div>
-								<div class="controls">
-									<div class="btn-group">
-										<button class="btn" ng-model="radioLength" btn-radio="8">8</button>
-										<button class="btn" ng-model="radioLength" btn-radio="12">12</button>
-										<button class="btn" ng-model="radioLength" btn-radio="16">16</button>
-									</div>
-								</div>
-							</div>
-							<div class="control-group">
-								<div class="controls">
-									<button class="btn" ng-click="generatePassword()"><i class="icon-key"></i> Generate passwords</button>
-								</div>
-							</div>
-							<div class="control-group" ng-hide="0 == passwords.length">
-								<div class="control-label">Results:</div>
-								<div class="controls">
-									<select name="passwords" size="8" ng-change="generateHash()" ng-model="selectedPassword" class="input-xlarge">
-										<option ng-repeat="password in passwords">{{password}}</option>
-									</select>
-								</div>
-							</div>
-							<div class="control-group" ng-hide="0 == passwords.length">
-								<div class="control-label">Selected password:</div>
-								<div class="controls">
-									<input type="text" readonly ng-model="selectedPassword" class="input-xlarge">
-								</div>
-							</div>
-						</fieldset>
-
-						<fieldset ng-hide="0 == passwords.length">
-							<legend>Hashing</legend>
-							<div class="control-group">
-								<div class="control-label">Algorythm:</div>
-								<div class="controls">
-									<div class="btn-group">
-										<button class="btn" ng-model="radioHash" btn-radio="1" ng-click="generateHash()">MD5</button>
-										<button class="btn" ng-model="radioHash" btn-radio="2" ng-click="generateHash()">SHA-1</button>
-										<button class="btn" ng-model="radioHash" btn-radio="3" ng-click="generateHash()">SHA-256</button>
-									</div>
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label" for="prefix">Prefix:</label>
-								<div class="controls">
-									<input type="text" name="prefix" id="prefix" ng-model="prefix" ng-change="generateHash()" class="input-xlarge">
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label" for="suffix">Suffix:</label>
-								<div class="controls">
-									<input type="text" name="prefix" id="suffix" ng-model="suffix" ng-change="generateHash()" class="input-xlarge">
-								</div>
-							</div>
-							<div class="control-group">
-								<div class="control-label">Your hash:</div>
-								<div class="controls">
-									<input type="text" readonly ng-model="hash" class="input-xxlarge">
-								</div>
-							</div>
-						</fieldset>
-					</form>
-				</section>
+				<section class="span9" ng-view></section>
 			</div>
 		</div>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="js/vendor/angular.min.js"></script>
+		<script src="js/vendor/angular-route.min.js"></script>
 		<script src="js/vendor/md5.js"></script>
 		<script src="js/vendor/sha1.js"></script>
 		<script src="js/vendor/sha256.js"></script>
-		<script src="js/app.js"></script>
 		<script src="js/directives/ui-bootstrap.min.js"></script>
 		<script src="js/directives/ui-bootstrap-tpls.min.js"></script>
 		<script src="js/controllers/PasswordGeneratorCtrl.js"></script>
+		<script src="js/app.js"></script>
 	</body>
 </html>
