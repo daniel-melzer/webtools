@@ -14,5 +14,9 @@ WebToolsApp.config(['$routeProvider', function($routeProvider) {
 				templateUrl: 'js/partials/timestamp-form.html',
 				controller: 'TimestampConverterCtrl'
 			})
+			.when('/urldecode', {
+				templateUrl: 'js/partials/urldecode.html',
+				controller: 'UrlDecodeCtrl'
+			})
 			.otherwise({ redirectTo: '/password' });
 }]);
