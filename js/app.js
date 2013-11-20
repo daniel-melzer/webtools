@@ -18,5 +18,9 @@ WebToolsApp.config(['$routeProvider', function($routeProvider) {
 				templateUrl: 'js/partials/urldecode.html',
 				controller: 'UrlDecodeCtrl'
 			})
+			.when('/converter', {
+				templateUrl: 'js/partials/number-converter.html',
+				controller: 'NumberConverter'
+			})
 			.otherwise({ redirectTo: '/password' });
 }]);
