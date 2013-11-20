@@ -1,0 +1,46 @@
+<form class="form-horizontal">
+	<fieldset>
+		<legend>Number converter</legend>
+		<div class="form-group">
+			<label class="col-xs-3 control-label">Binary</label>
+			<div class="col-xs-6">
+				<input type="text" name="bin" class="form-control input-sm" ng-model="bin" ng-change="convertFromBin()">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-xs-3 control-label">Tenary</label>
+			<div class="col-xs-6">
+				<input type="text" name="ten" class="form-control input-sm" ng-model="ten" ng-change="convertFromTen()">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-xs-3 control-label">Quinary</label>
+			<div class="col-xs-6">
+				<input type="text" name="qui" class="form-control input-sm" ng-model="qui" ng-change="convertFromQui()">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-xs-3 control-label">Octal</label>
+			<div class="col-xs-6">
+				<input type="text" name="oct" class="form-control input-sm" ng-model="oct" ng-change="convertFromOct()">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-xs-3 control-label">Decimal</label>
+			<div class="col-xs-6">
+				<input type="text" name="dec" class="form-control input-sm" ng-model="dec" ng-change="convertFromDec()">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-xs-3 control-label">Hexadecimal</label>
+			<div class="col-xs-6">
+				<input type="text" name="hex" class="form-control input-sm" ng-model="hex" ng-change="convertFromHex()">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-xs-offset-3 col-xs-6">
+				<button class="btn btn-danger" ng-click="reset()"><i class="fa fa-refresh"></i> Reset</button>
+			</div>
+		</div>
+	</fieldset>
+</form>
