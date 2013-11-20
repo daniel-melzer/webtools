@@ -1,13 +1,15 @@
 <form class="form-horizontal">
 	<fieldset>
 		<legend>URL decoder/encoder</legend>
-		<div class="control-group">
-			<textarea ng-model="dencoder" cols="100" rows="20" class="input-xxlarge"></textarea>
+		<div class="form-group">
+			<div class="col-sm-12">
+				<textarea ng-model="dencoder" rows="20" class="form-control"></textarea>
+			</div>
 		</div>
-		<div class="control-group">
-			<div class="controls">
-				<button class="btn" ng-click="decode()">Decode</button>
-				<button class="btn" ng-click="encode()">Encode</button>
+		<div class="form-group">
+			<div class="col-xs-12">
+				<button class="btn btn-default" ng-click="decode()">Decode</button>
+				<button class="btn btn-default" ng-click="encode()">Encode</button>
 			</div>
 		</div>
 	</fieldset>
